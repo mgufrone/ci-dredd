@@ -12,7 +12,5 @@ after_success:
   - export TAG=`if [ "$TRAVIS_BRANCH" == "master" ]; then echo "latest"; else echo $TRAVIS_BRANCH
     ; fi`
   - docker login -u $DOCKER_LOGIN -p $DOCKER_PASS
-  - docker build -f Dockerfile -t $DOCKER_IMAGE_NAME:$COMMIT .
-  - docker tag $DOCKER_IMAGE_NAME:$COMMIT $DOCKER_IMAGE_NAME:$TAG
-  - docker push $DOCKER_IMAGE_NAME:$COMMIT
-  - docker push $DOCKER_IMAGE_NAME:$TAG
+  - docker build -f Dockerfile -t $DOCKER_IMAGE_NAME:latest .
+  - docker push $DOCKER_IMAGE_NAME:latest
