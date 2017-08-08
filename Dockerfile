@@ -18,6 +18,7 @@ RUN apt-get update && \
     apt-get install -y --allow-downgrades --allow-remove-essential \
         --allow-change-held-packages \
         python2.7 \
+        mysql-client \
         php7.1-cli \
         php7.1-common \
         php7.1-curl \
