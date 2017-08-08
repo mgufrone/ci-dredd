@@ -17,6 +17,7 @@ RUN curl -sL https://deb.nodesource.com/setup_8.x | bash -
 RUN apt-get update && \
     apt-get install -y --allow-downgrades --allow-remove-essential \
         --allow-change-held-packages \
+        python2.7 \
         php7.1-cli \
         php7.1-common \
         php7.1-curl \
